@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import Inicio from './components/inicio.vue'
+import Inicio from './components/Interfaz_Reservas.vue'
 
 export default {
   name: 'App',
   components: {
-    Inicio
+   Inicio
   }
 }
 </script>
