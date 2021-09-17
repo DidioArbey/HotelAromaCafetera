@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <inicio/>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Inicio from './components/Interfaz_Reservas.vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-   Inicio
+    HelloWorld
   }
 }
 </script>
@@ -23,17 +26,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-ul {
-  background: #3399ff;
-  padding: 20px;
 }
 
-ul li {
-  background: #cce5ff ;
-  padding: 5px;
-  margin-left: 35px;
+#nav {
+  padding: 30px;
 
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
