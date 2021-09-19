@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <inicio/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <inicio />
   </div>
 </template>
 
 <script>
-import Inicio from './components/Interfaz_Reservas.vue'
+import Inicio from "./components/Inicio.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-   Inicio
-  }
-}
+    Inicio,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -31,9 +31,8 @@ ul {
 }
 
 ul li {
-  background: #cce5ff ;
+  background: #cce5ff;
   padding: 5px;
   margin-left: 35px;
-
 }
 </style>
