@@ -1,19 +1,77 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <inicio />
-  </div>
+  <v-app>
+
+    <div id="app">
+      <v-toolbar
+        dark
+        prominent
+      >
+        <v-app-bar-nav-icon>
+
+        </v-app-bar-nav-icon>
+
+        <v-toolbar-title>Hotel Aroma Cafetera</v-toolbar-title>
+
+        <v-spacer></v-spacer>
+
+        <v-btn
+        color="green darken-3"
+        elevation="5"
+        @click="inicio()"
+        >
+        El Hotel
+        </v-btn>
+
+        <v-btn
+        color="green darken-3"
+        elevation="5"
+        >
+        Habitaciones
+        </v-btn>
+
+        <v-btn
+        color="green darken-3"
+        elevation="5"
+        >
+        Tarifas
+        </v-btn>
+
+        <v-btn
+        color="green darken-3"
+        elevation="5"
+        >
+        Reservar
+        </v-btn>
+
+        <v-btn
+        color="green darken-3"
+        elevation="5"
+        >
+        Contactenos
+        </v-btn>
+
+
+      </v-toolbar>
+
+      <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/inicio">Inicio</router-link>
+      </div>
+      <router-view />
+    </div>
+  </v-app>
 </template>
 
 <script>
-import Inicio from './components/Inicio.vue'
-
 export default {
-  name: "App",
-  components: {
-    Inicio,
-  },
-};
+  methods:{
+    inicio(){
+      console.log("ir al inicio funcionando");
+      this.$router.push("/");
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -23,16 +81,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-ul {
-  background: #3399ff;
-  padding: 20px;
 }
 
-ul li {
-  background: #cce5ff;
-  padding: 5px;
-  margin-left: 35px;
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
