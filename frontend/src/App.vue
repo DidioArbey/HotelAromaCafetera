@@ -15,6 +15,7 @@
         <v-spacer></v-spacer>
 
         <v-btn
+        class="ma-1"
         color="green darken-3"
         elevation="5"
         @click="inicio()"
@@ -23,6 +24,7 @@
         </v-btn>
 
         <v-btn
+        class="ma-1"
         color="green darken-3"
         elevation="5"
         >
@@ -30,6 +32,7 @@
         </v-btn>
 
         <v-btn
+        class="ma-1"
         color="green darken-3"
         elevation="5"
         >
@@ -37,6 +40,7 @@
         </v-btn>
 
         <v-btn
+        class="ma-1"
         color="green darken-3"
         elevation="5"
         >
@@ -44,6 +48,7 @@
         </v-btn>
 
         <v-btn
+        class="ma-1"
         color="green darken-3"
         elevation="5"
         >

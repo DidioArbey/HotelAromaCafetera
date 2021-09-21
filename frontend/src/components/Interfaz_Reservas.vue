@@ -4,7 +4,6 @@
         <h2>Equipo 1</h2>
         <ul>
             <li>Francisco Camacho</li>
-            
         </ul>
     </div>
 
