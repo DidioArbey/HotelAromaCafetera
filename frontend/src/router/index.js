@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Inicio from '../views/Inicio.vue'
+import HabitacionesView from '../views/HabitacionesView.vue'
+import TarifasView from '../views/TarifasView.vue'
+import ReservasView from '../views/ReservasView.vue'
+import ContactoView from '../views/ContactoView.vue'
 
 
 Vue.use(VueRouter)
@@ -15,9 +19,29 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path:'/inicio',
-    name:'Inicio',
+    path:'/',
+    name:'home',
     component: Inicio
+  },
+  {
+    path:'/habitacionesview',
+    name:'HabitacionesView',
+    component:HabitacionesView
+  },
+  {
+    path:'/tarifasview',
+    name:'TarifasView',
+    component:TarifasView
+  },
+  {
+    path:'/reservasview',
+    name:'ReservasView',
+    component:ReservasView
+  },
+  {
+    path:'/contactoview',
+    name:'ContactoView',
+    component:ContactoView
   }
 ]
 
