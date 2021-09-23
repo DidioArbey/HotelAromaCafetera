@@ -5,7 +5,7 @@
         <v-img></v-img>
 
         <v-toolbar-title>
-          <v-img contain src="./assets/logo.png" max-width="250"></v-img
+          <v-img contain src="./assets/logo.png" max-width="280"></v-img
         ></v-toolbar-title>
 
         <v-spacer></v-spacer>
