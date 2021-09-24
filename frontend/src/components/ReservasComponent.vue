@@ -7,7 +7,7 @@
             height="700"
         >
             <v-row class=" red darken-4 mx-auto my-auto rounded-t-lg d-flex px-10 py-6 ">
-                <h2 class="white--text">Tarifas</h2>
+                <h2 class="white--text">Reservas</h2>
             </v-row>
 
             <v-row justify="center" class="mx-auto my-auto  d-flex px-10  py-6">
