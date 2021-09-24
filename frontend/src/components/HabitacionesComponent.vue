@@ -3,25 +3,6 @@
         <v-sheet  class=" mx-16 my-12"
             color="white"
             elevation="6"
-<<<<<<< HEAD
-
-            height="700"
-        >
-            <v-row class=" red darken-4 mx-auto my-auto rounded-t-lg d-flex px-10 py-6 ">
-                <h2 class="white--text">Habitaciones</h2>
-            </v-row>
-
-            <v-row justify="center" class="mx-auto my-auto  d-flex px-10  py-6">
-                
-
-
-
-
-
-
-
-
-=======
             rounded
             height= auto
         >
@@ -72,7 +53,6 @@
                     aliquam volutpat montes ultricies platea tincidunt tortor inceptos mattis
                     vulputate.</span>
                 </v-col>
->>>>>>> eliana
             </v-row>
         </v-sheet>
     </v-app>
@@ -82,10 +62,6 @@
 
 
 <script>
-<<<<<<< HEAD
-
-=======
->>>>>>> eliana
 export default {
 };
 </script>

@@ -1,13 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <tarifas-componente/>
-</template>
-
-<script>
-import TarifasComponente from '../components/tarifas.vue';
-export default {
-  components: { TarifasComponente },};
-=======
     <tarifas-component/>
 </template>
 
@@ -15,7 +6,6 @@ export default {
 import tarifasComponent from '../components/tarifasComponent.vue';
 export default {
   components: { tarifasComponent },};
->>>>>>> eliana
 </script>
 
 <style>

@@ -113,17 +113,6 @@
         </v-sheet>
     </v-app>
 </template>
-<<<<<<< HEAD
-
-
-
-
-<script>
-
-export default {
-};
-</script>
-=======
 
 
 
@@ -162,4 +151,3 @@ export default {
 };
 </script>
 
->>>>>>> eliana
