@@ -4,7 +4,7 @@
             color="white"
             elevation="6"
             rounded
-            height="700"
+            height= auto
         >
             <v-row class=" red darken-4 mx-auto my-auto rounded-t-lg d-flex px-10 py-6 ">
                 <h2 class="white--text">Contactanos</h2>
@@ -21,7 +21,7 @@
                     <v-container bg fill-height>
                     <v-row class=" d-flex">
                         <v-text-field
-                            v-model="firstname"
+                            v-model="name"
                             :rules="nameRules"
                             :counter="10"
                             label="Nombres y Apellidos"
@@ -40,8 +40,8 @@
 
                     <v-row>
                         <v-text-field
-                            v-model="lastname"
-                            :rules="nameRules"
+                            v-model="phoneNumber"
+                            :rules="phoneRules"
                             :counter="10"
                             label="Teléfono"
                             required
@@ -50,8 +50,8 @@
 
                     <v-row>
                         <v-textarea
-                            v-model="email"
-                            :rules="emailRules"
+                            v-model="comments"
+                            :rules="commentRules"
                             label="Dinos algo que podamos solucionarte"
                             required
                         ></v-textarea>
@@ -82,6 +82,25 @@
 <script>
 
 export default {
+    data: () => ({
+        name: '',
+        phoneNumber: '',
+        email: '',
+        comments: ''
+        }),
+
+        methods: {
+        submit () {
+            this.$refs.observer.validate()
+        },
+        clear () {
+            this.name = ''
+            this.email = ''
+            this.phoneNumber = ''
+            this.comments = ''
+            this.$refs.observer.reset()
+        },
+        },
 };
 </script>
 

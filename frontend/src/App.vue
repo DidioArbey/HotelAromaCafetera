@@ -1,70 +1,60 @@
 <template>
   <v-app>
     <div id="app">
-      <v-toolbar dark prominent>
-        <v-img></v-img>
+      <v-row class=" mx-auto my-auto  d-flex px-6">
 
-        <v-toolbar-title>
-          <v-img contain src="./assets/logo.png" max-width="280"></v-img
-        ></v-toolbar-title>
+        <v-col>
+          <v-img contain src="./assets/logo.png" max-width="250"></v-img>
+        </v-col>
 
-        <v-spacer></v-spacer>
-        <v-btn
-          class="ma-8"
-          color="green darken-3"
-          elevation="5"
-          x-large
+        <v-col  class="px-6">
+        </v-col>
+
+        <v-col  class="mx-1 my-auto ">
+          <v-btn color="green darken-3 white--text" elevation="5"
+          block large
           @click="inicio()"
-        >
+          >
           El Hotel
-        </v-btn>
+          </v-btn>
+        </v-col>
 
-        <v-btn
-          class="ma-8"
-          color="green darken-3"
-          elevation="5"
-          x-large
+        <v-col class="mx-1 my-auto ">
+          <v-btn color="green darken-3 white--text" elevation="5"
+          block large
           @click="habitaciones()"
-        >
+          >
           Habitaciones
-        </v-btn>
+          </v-btn>
+        </v-col>
 
-        <v-btn
-          class="ma-8"
-          color="green darken-3"
-          elevation="5"
-          x-large
+        <v-col class="mx-1 my-auto ">
+          <v-btn color="green darken-3 white--text" elevation="5"
+          block large
           @click="tarifas()"
-        >
+          >
           Tarifas
-        </v-btn>
+          </v-btn>
+        </v-col>
 
-        <v-btn
-          class="ma-8"
-          color="green darken-3"
-          elevation="5"
+        <v-col class="mx-1 my-auto ">
+          <v-btn color="green darken-3 white--text" elevation="5"
           @click="reservar()"
-          x-large
-        >
+          block large
+          >
           Reservar
-        </v-btn>
+          </v-btn>
+        </v-col>
 
-        <v-btn
-          class="ma-8"
-          color="green darken-3"
-          elevation="5"
+        <v-col class="mx-auto my-auto ">
+          <v-btn color="green darken-3 white--text" elevation="5"
           @click="contactenos()"
-          x-large
-        >
+          block large
+          >
           Contactenos
-        </v-btn>
-      </v-toolbar>
-
-      <!-- <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/inicio">Inicio</router-link>
-      </div>-->
+          </v-btn>
+        </v-col>
+      </v-row>
       <router-view />
     </div>
 
@@ -139,7 +129,7 @@ export default {
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
 
   a {
     font-weight: bold;
