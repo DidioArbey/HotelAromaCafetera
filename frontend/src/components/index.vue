@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-sheet class="mx-16 my-12" color="white" rounded height="700">
+        <v-sheet class="mx-16 my-12" elevation="6" color="white" rounded height="700">
         <v-row
             class="red darken-4 mx-auto my-auto rounded-t-lg d-flex px-10 py-6"
         >

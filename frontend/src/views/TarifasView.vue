@@ -1,11 +1,11 @@
 <template>
-  <h1>Tarifas</h1>
+  <tarifas-componente/>
 </template>
 
 <script>
+import TarifasComponente from '../components/tarifas.vue';
 export default {
-
-}
+  components: { TarifasComponente },};
 </script>
 
 <style>
