@@ -1,13 +1,17 @@
 <template>
     <v-app>
+<<<<<<< HEAD
         <v-sheet class="mx-16 my-12" elevation="6" color="white" rounded height="700">
+=======
+        <v-sheet class="mx-16 my-12" color="white" rounded height= auto>
+>>>>>>> eliana
         <v-row
             class="red darken-4 mx-auto my-auto rounded-t-lg d-flex px-10 py-6"
         >
             <h2 class="white--text">Hotel Aroma Cafetera</h2>
         </v-row>
-        <v-row>
-            <v-col
+        <v-row class=" mx-auto my-10  d-flex ">
+            <v-col class="mr-4 ml-15 my-auto"
             cols="6"
             md="4"
             >
@@ -17,11 +21,7 @@
                 >
                 </v-img>
             </v-col>
-            <v-col
-            cols="12"
-            sm="6"
-            md="8"
-            >
+            <v-col  class="mr-15 ml-4 my-auto text-justify">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
                 debitis maiores ipsum exercitationem quos nesciunt maxime officia
@@ -40,12 +40,12 @@
             </p>
             </v-col>
         </v-row>
-        <v-row>
+        <v-row class=" mx-auto my-10  d-flex ">
             <v-col>
                 <h1>Mision</h1>
 
             </v-col>
-            <v-col>
+            <v-col  class="mr-15 ml-4 my-auto text-justify">
                 <p>
                     Brindar un servicio hotelero de excelencia, ofreciendo a nuestros
                     huéspedes hospitalidad, mediante un trato individualizado por un
@@ -54,11 +54,11 @@
                 </p>
             </v-col>
         </v-row>
-        <v-row>
+        <v-row class=" mx-auto my-10  d-flex ">
             <v-col>
                 <h1>Vision</h1>
             </v-col>
-            <v-col>
+            <v-col  class="mr-15 ml-4 my-auto text-justify">
                 <p>
                     Somos una casa hotel ubicada en circasia Quindío en donde buscamos que nuestros huéspedes vivan una experiencia única conociendo la cultura arquitectura y demás costumbres de la región contando con cómodas instalaciones para su descanso
                 </p>
