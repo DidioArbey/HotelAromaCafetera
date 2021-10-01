@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Inicio from '../views/Inicio.vue'
+import Index2 from '../views/Index2.vue'
 import HabitacionesView from '../views/HabitacionesView.vue'
 import TarifasView from '../views/TarifasView.vue'
 import ReservasView from '../views/ReservasView.vue'
@@ -17,6 +18,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path:'/index2',
+    name:'Index2',
+    component:Index2
   },
   {
     path:'/',

@@ -23,47 +23,25 @@
             md="8"
             >
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-                debitis maiores ipsum exercitationem quos nesciunt maxime officia
-                voluptatibus temporibus eius id praesentium nulla, error, officiis,
-                aut amet deserunt incidunt doloribus?
+                En Circasia Quindío, en el corazón del eje cafetero, se levanta su Hotel "Aroma Cafetera", queremos brindarle a nuestros huéspedes la mejor experiencia de la cultura cafetera de nuestra región, comida típica, 10 cómodas habitaciones, arte y arquitectura propias de una finca cafetera, entre otros.
             </p>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                reiciendis enim temporibus, dignissimos aliquam harum quo, corrupti,
-                animi dolore hic id? Placeat corrupti assumenda est quam eius
-                quaerat repudiandae tempora!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nisi culpa, est velit praesentium amet porro modi maxime laborum quos suscipit? Nemo adipisci molestiae dignissimos quia? Voluptates iste inventore dolore!
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eius perspiciatis fugiat nisi totam aperiam adipisci ipsam dolore! Velit, vitae recusandae aut libero obcaecati deleniti laudantium dignissimos illum quaerat suscipit.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum iure maiores esse voluptates ducimus aliquam, inventore facere eius dolore rem tempore nihil? Voluptatem iusto ratione at numquam voluptate corrupti magnam.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi architecto soluta totam! Natus quis provident impedit, cumque ratione necessitatibus fuga obcaecati adipisci placeat error doloribus, doloremque accusantium sit aliquid.
+                Estamos cerca de todo: Pereira (30 km), Armenia (7 km), el Aeropuerto Internacional Matecaña (40 km), Aeropuerto Internacional El Edén (27 km) y los principales atractivos turístico de la zona; Montenegro con su Parque del Café (15 km), Salento y su hermoso valle del Cocora (14 km), Quimbaya y las atracciones de Panaca (25 km), Filandia (18 km) y muchísimos más.
             </p>
-            </v-col>
-        </v-row>
-        <v-row>
-            <v-col>
-                <h1>Mision</h1>
-
-            </v-col>
-            <v-col>
+            <br>
+            <h1>Misión</h1>
                 <p>
-                    Brindar un servicio hotelero de excelencia, ofreciendo a nuestros
-                    huéspedes hospitalidad, mediante un trato individualizado por un
-                    personal altamente motivado, buscando superar las expectativas de
-                    nuestros visitantes.
+                    Brindar un servicio hotelero de excelencia, ofreciendo a nuestros huéspedes hospitalidad, mediante un trato individualizado por un personal altamente motivado, buscando superar las expectativas de nuestros visitantes.
                 </p>
+                <br>
+            <h1>Visión</h1>
+            <p>
+                    Somos una casa hotel ubicada en circasia Quindío, buscamos que nuestros huéspedes vivan una experiencia única, conociendo la cultura, arquitectura y demás costumbres de la región, contando con cómodas instalaciones para su descanso.
+            </p>
+            
             </v-col>
         </v-row>
-        <v-row>
-            <v-col>
-                <h1>Vision</h1>
-            </v-col>
-            <v-col>
-                <p>
-                    Somos una casa hotel ubicada en circasia Quindío en donde buscamos que nuestros huéspedes vivan una experiencia única conociendo la cultura arquitectura y demás costumbres de la región contando con cómodas instalaciones para su descanso
-                </p>
-            </v-col>
-        </v-row>
+        
         </v-sheet>
     </v-app>
 </template>

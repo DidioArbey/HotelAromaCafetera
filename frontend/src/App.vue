@@ -9,6 +9,17 @@
         ></v-toolbar-title>
 
         <v-spacer></v-spacer>
+
+        <v-btn
+          class="ma-8"
+          color="green darken-3"
+          elevation="5"
+          x-large
+          @click="index2()"
+        >
+          Inicio
+        </v-btn>
+
         <v-btn
           class="ma-8"
           color="green darken-3"
@@ -105,6 +116,10 @@ export default {
     icons: ["mdi-facebook", "mdi-twitter", "mdi-instagram"],
   }),
   methods: {
+    index2() {
+      console.log("ir al inicio carrusel");
+      this.$router.push("/index2");
+    },
     inicio() {
       console.log("ir al inicio funcionando");
       this.$router.push("/");
