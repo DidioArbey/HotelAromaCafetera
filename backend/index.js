@@ -1,19 +1,35 @@
 const express = require("express");
 const morgan = require('morgan');
+const cors = require("cors");
+const compression = require("compression");
+
+//import routes
+const cliente = require("./src/routes/clienteRequest");
+const habitacion = require("./src/routes/habitacionesRequest");
+const reserva = require("./src/routes/reservasRequest");
+const login = require("./src/routes/loginAdmin");
+const contacto = require("./src/routes/contantenosRequest");
+
 
 const app = express();
-const cors = require("cors");
+
 
 //MIDELWARES
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
+app.use(compression());
 
 app.use(express.urlencoded({ extended:true}))
 
 //RUTAS
 app.get('/', function (req, res) {
-    res.send('Hola mundo desde el backend');
+    //res.send('Hola mundo desde el backend');
+    app.use(cliente);
+    app.use(habitacion);
+    app.use(reserva);
+    app.use(contacto);
+    app.use(login);
 });
 
 
