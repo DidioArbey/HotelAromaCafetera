@@ -5,6 +5,8 @@ import HabitacionesView from '../views/HabitacionesView.vue'
 import TarifasView from '../views/TarifasView.vue'
 import ReservasView from '../views/ReservasView.vue'
 import ContactoView from '../views/ContactoView.vue'
+import LoginView from '../views/LoginView.vue'
+
 
 
 Vue.use(VueRouter)
@@ -42,6 +44,11 @@ const routes = [
     path:'/contactoview',
     name:'ContactoView',
     component:ContactoView
+  },
+  {
+    path:'/loginview',
+    name:'loginview',
+    component:LoginView
   }
 ]
 

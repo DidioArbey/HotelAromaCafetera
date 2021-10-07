@@ -6,6 +6,18 @@
         >
             <h2 class="white--text">Hotel Aroma Cafetera</h2>
         </v-row>
+        <v-row justify="center" class="mx-auto my-auto  d-flex px-10  py-6">
+                <v-carousel>
+                    <v-carousel-item
+                        v-for="(item,i) in items"
+                        :key="i"
+                        :src="item.src"
+                        reverse-transition="fade-transition"
+                        transition="fade-transition"
+                    ></v-carousel-item>
+                </v-carousel>
+        </v-row>
+
         <v-row class=" mx-auto my-10  d-flex ">
             <v-col class="mr-4 ml-15 my-auto"
             cols="6"
@@ -67,6 +79,30 @@
 <script>
 export default {
     components: {
+    },
+    data(){
+        return{
+            items: [
+                {
+                    src: 'https://viride21.com/photos/aroma01.jpg',
+                },
+                {
+                    src: 'https://viride21.com/photos/aroma04.jpg',
+                },
+                {
+                    src: 'https://viride21.com/photos/aroma07.jpg',
+                },
+                {
+                    src: 'https://viride21.com/photos/aroma09.jpg',
+                },
+                {
+                    src: 'https://viride21.com/photos/aroma11.jpg',
+                },
+                {
+                    src: 'https://viride21.com/photos/aroma05.jpg',
+                },
+            ],
+        }
     },
 };
 </script>
