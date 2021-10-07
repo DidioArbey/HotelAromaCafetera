@@ -26,6 +26,8 @@
                             :counter="10"
                             label="Nombres y Apellidos"
                             required
+                            outlined
+                            dense
                         ></v-text-field>
                     </v-row>
 
@@ -35,6 +37,8 @@
                             :rules="emailRules"
                             label="E-mail"
                             required
+                            outlined
+                            dense
                         ></v-text-field>
                     </v-row>
 
@@ -45,6 +49,8 @@
                             :counter="10"
                             label="Teléfono"
                             required
+                            outlined
+                            dense
                         ></v-text-field>
                     </v-row>
 
@@ -54,6 +60,8 @@
                             :rules="emailRules"
                             label="Dinos algo que podamos solucionarte"
                             required
+                            outlined
+                            dense
                         ></v-textarea>
                     </v-row>
 
