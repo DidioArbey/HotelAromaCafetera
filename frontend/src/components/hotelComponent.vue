@@ -8,7 +8,7 @@
             elevation="6">
         <v-row
             class="red darken-4 mx-auto my-auto rounded-t-lg d-flex px-10 py-6"
-        >
+        > 
             <v-img
                 max-height="58"
                 max-width="auto"
@@ -33,7 +33,7 @@
             
             <v-col  class="mr-15 ml-4 my-auto text-justify">
             <p>
-                En Circasia Quindí­o, en el corazón del eje cafetero, se levanta su Hotel "Aroma Cafetera", queremos brindarle a nuestros huéspedes la mejor experiencia de la cultura cafetera de nuestra región, comida tí­pica, 10 cómodas habitaciones, arte y arquitectura propias de una finca cafetera, entre otros.
+                En Circasiaaaaaaaaaaaaaaa Quindí­o, en el corazón del eje cafetero, se levanta su Hotel "Aroma Cafetera", queremos brindarle a nuestros huéspedes la mejor experiencia de la cultura cafetera de nuestra región, comida tí­pica, 10 cómodas habitaciones, arte y arquitectura propias de una finca cafetera, entre otros.
             </p>
             <p>
                 Estamos cerca de todo: Pereira (30 km), Armenia (7 km), el Aeropuerto Internacional Matecaña (40 km), Aeropuerto Internacional El Edén (27 km) y los principales atractivos turí­stico de la zona; Montenegro con su Parque del Café (15 km), Salento y su hermoso valle del Cocora (14 km), Quimbaya y las atracciones de Panaca (25 km), Filandia (18 km) y muchísimos más.
