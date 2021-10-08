@@ -1,14 +1,17 @@
-const express = require("express");
-const morgan = require('morgan');
-const cors = require("cors");
-const compression = require("compression");
+let express = require("express"),
+    morgan = require('morgan'),
+    cors = require("cors"),
+    mongoose = require("mongoose"),
+    database = require("./src/config/mongoBD"),
+    compression = require("compression"),
+    bodyParser = require("body-parser");
 
 //import routes
-const cliente = require("./src/routes/clienteRequest");
-const habitacion = require("./src/routes/habitacionesRequest");
-const reserva = require("./src/routes/reservasRequest");
-const login = require("./src/routes/loginAdmin");
-const contacto = require("./src/routes/contantenosRequest");
+const cliente = require("../backend/src/routes/clientes.routes");
+const habitacion = require("./src/routes/habitaciones.routes");
+const reserva = require("./src/routes/reservas.routes");
+const login = require("./src/routes/login.routes");
+const contacto = require("./src/routes/contantenos.routes");
 
 
 const app = express();
@@ -19,19 +22,36 @@ app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
 app.use(compression());
+app.use(express.urlencoded({ extended:true}));
 
-app.use(express.urlencoded({ extended:true}))
+app.use(bodyParser.json());
+app.use(
+    bodyParser.urlencoded({
+        extended: false,
+    })
+);
+
+// Connect mongoDB
+mongoose.Promise = global.Promise;
+mongoose
+    .connect(database.db, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(
+        () => {
+            console.log("Database connected");
+        },
+        (error) => {
+            console.log("Database could't be connected to: " + error);
+        }
+    );
 
 //RUTAS
-app.get('/', function (req, res) {
-    //res.send('Hola mundo desde el backend');
-    app.use(cliente);
-    app.use(habitacion);
-    app.use(reserva);
-    app.use(contacto);
-    app.use(login);
-});
-
+app.use('/api/cliente', cliente);
+app.use('/api/reserva', reserva);
+app.use('/api/habitacion', habitacion);
+app.use('/api/contacto', contacto);
 
 
 
@@ -40,6 +60,8 @@ app.set('puerto', process.env.PORT || 3000);
 app.listen(app.get('puerto'), function () {
     console.log('el backend escucha en el puerto ' + app.get('puerto'));
 });
+
+
 // app.listen(3000, () => {
 //     console.log("Servidor conectado con el puerto 3000");
 // });
