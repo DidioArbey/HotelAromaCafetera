@@ -11,15 +11,6 @@
             </v-row>
 
             <v-row justify="center" class="mx-auto my-auto  d-flex px-10  py-6">
-                
-
-
-
-
-
-
-
-
             </v-row>
         </v-sheet>
     </v-app>

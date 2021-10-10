@@ -1,13 +1,12 @@
 <template>
-  <tarifas-componente/>
+    <tarifas-component/>
 </template>
 
 <script>
-import TarifasComponente from '../components/tarifas.vue';
+import tarifasComponent from '../components/tarifasComponent.vue';
 export default {
-  components: { TarifasComponente },};
+  components: { tarifasComponent },};
 </script>
 
 <style>
-
 </style>

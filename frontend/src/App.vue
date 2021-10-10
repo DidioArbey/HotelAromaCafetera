@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <div id="app">
+<<<<<<< HEAD
       <v-toolbar dark prominent>
         <v-img></v-img>
 
@@ -25,85 +26,128 @@
           color="green darken-3"
           elevation="5"
           x-large
+=======
+      <v-row class="mx-auto my-auto  d-flex px-6">
+
+        <v-col>
+          <v-img contain src="./assets/Logo_Aroma_Cafetera.png" max-width="300"></v-img>
+        </v-col>
+<!-- 
+        <v-col  class="px-6">
+        </v-col> -->
+
+        <v-col  class="mx-1 my-auto">
+          <v-btn color="green darken-2 white--text" elevation="5"
+          block large
+>>>>>>> master
           @click="inicio()"
-        >
+          >
+          Inicio
+          </v-btn>
+        </v-col>
+
+          <!-- <v-col class="mx-1 my-auto ">
+          <v-btn color="green darken-2 white--text" elevation="5"
+          block large
+          @click="hotel()"
+          >
           El Hotel
-        </v-btn>
+          </v-btn>
+        </v-col> -->
 
-        <v-btn
-          class="ma-8"
-          color="green darken-3"
-          elevation="5"
-          x-large
+        <v-col class="mx-1 my-auto ">
+          <v-btn color="green darken-2 white--text" elevation="5"
+          block large
           @click="habitaciones()"
-        >
+          >
           Habitaciones
-        </v-btn>
+          </v-btn>
+        </v-col>
 
-        <v-btn
-          class="ma-8"
-          color="green darken-3"
-          elevation="5"
-          x-large
+        <v-col class="mx-1 my-auto ">
+          <v-btn color="green darken-2 white--text" elevation="5"
+          block large
           @click="tarifas()"
-        >
+          >
           Tarifas
-        </v-btn>
+          </v-btn>
+        </v-col>
 
-        <v-btn
-          class="ma-8"
-          color="green darken-3"
-          elevation="5"
+        <v-col class="mx-1 my-auto ">
+          <v-btn color="green darken-2 white--text" elevation="5"
           @click="reservar()"
-          x-large
-        >
-          Reservar
-        </v-btn>
+          block large
+          >
+          Reserve
+          </v-btn>
+        </v-col>
 
-        <v-btn
-          class="ma-8"
-          color="green darken-3"
-          elevation="5"
+        <v-col class="mx-1 my-auto">
+          <v-btn color="green darken-2 white--text" elevation="5"
           @click="contactenos()"
-          x-large
-        >
-          Contactenos
-        </v-btn>
-      </v-toolbar>
+          block large
+          >
+          Contáctenos
+          </v-btn>
+        </v-col>
 
-      <!-- <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/inicio">Inicio</router-link>
-      </div>-->
+      </v-row>
       <router-view />
     </div>
 
-    <v-footer dark padless>
-      <v-card class="flex" flat tile>
-        <v-card-title class="teal">
-          <strong class="subheading"
-            >Encuentranos tambien en nuestras redes sociales</strong
-          >
+    <v-footer dark padless >
 
-          <v-spacer></v-spacer>
+      <v-card green accent-3 class="flex" flat tile>
 
-          <v-btn
-            v-for="icon in icons"
-            :key="icon"
-            class="mx-4"
-            icon
-            dark
-            color="#B71C1C"
-          >
-            <v-icon size="24px" color="#B71C1C">
-              {{ icon }}
-            </v-icon>
-          </v-btn>
+        <v-card-title class="green lighten-1" mx-16 my-12>
+          <v-row
+            class="mb-1"
+            no-gutters>
+            <v-col class="green lighten-1">
+              <v-img
+                max-height="35"
+                max-width="auto"
+                @click="face()"
+                align-end
+                contain
+                src="../src/assets/face.png"
+                ></v-img>
+            </v-col>
+            <v-col class="green lighten-1">
+              <v-img
+                max-height="35"
+                max-width="auto"
+                align-end
+                @click="inst()"
+                contain
+                src="../src/assets/inst.png"
+                a href></v-img>
+            </v-col>
+            <v-col class="green lighten-1">
+              <v-img
+                max-height="30"
+                max-width="auto"
+                align-end
+                @click="trip()"
+                contain
+                src="../src/assets/trip.png"
+                ></v-img>
+            </v-col>
+            <v-col class="green lighten-1">
+              <v-img
+                max-height="35"
+                max-width="auto"
+                align-end
+                @click="book()"
+                contain
+                src="../src/assets/Book.png"
+                ></v-img>
+            </v-col>
+          </v-row>
         </v-card-title>
 
         <v-card-text class="py-2 white--text text-center">
-          {{ new Date().getFullYear() }} — <strong>Grupo 19 E-1</strong>
+          {{ new Date().getFullYear() }} - <strong>Grupo 19  E-1</strong>
         </v-card-text>
       </v-card>
     </v-footer>
@@ -124,6 +168,10 @@ export default {
       console.log("ir al inicio funcionando");
       this.$router.push("/");
     },
+    hotel() {
+      console.log("ir al habitaciones funcionando");
+      this.$router.push("/hotelView.vue");
+    },
     habitaciones() {
       console.log("ir al habitaciones funcionando");
       this.$router.push("/habitacionesview");
@@ -136,9 +184,25 @@ export default {
       console.log("ir al tarifas funcionando");
       this.$router.push("/reservasview");
     },
+    reservar2() {
+      console.log("ir al tarifas funcionando");
+      this.$router.push("/reservasview2");
+    },
     contactenos() {
       console.log("ir al tarifas funcionando");
       this.$router.push("/contactoview");
+    },
+    face() {
+      location.href="https://www.facebook.com/Aroma-cafetera-hotel-378362249262641";
+    },
+    inst() {
+      location.href="https://www.instagram.com/aromacafeterahotel";
+    },
+    trip() {
+      location.href="https://www.tripadvisor.co/Hotel_Review-g2044718-d12902680-Reviews-Aroma_Cafetera-Circasia_Quindio_Department.html";
+    },
+    book() {
+      location.href="https://www.booking.com/hotel/co/aroma-cafetera.es.html";
     },
   },
 };
@@ -154,7 +218,7 @@ export default {
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
 
   a {
     font-weight: bold;

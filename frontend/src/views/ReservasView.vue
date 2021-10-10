@@ -1,13 +1,12 @@
 <template>
-  <reservas-componente/>
+    <reservas-component/>
 </template>
 
 <script>
-import ReservasComponente from '../components/ReservasComponent.vue';
+import ReservasComponent from '../components/ReservasComponent.vue';
 export default {
-  components: { ReservasComponente },};
+  components: { ReservasComponent },};
 </script>
 
 <style>
-
 </style>

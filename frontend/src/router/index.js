@@ -1,14 +1,21 @@
 import Vue from 'vue'
+import Vuetify from 'vuetify/lib'
 import VueRouter from 'vue-router'
 import Inicio from '../views/Inicio.vue'
+<<<<<<< HEAD
 import Index2 from '../views/Index2.vue'
+=======
+import HotelView from '../views/hotelView.vue'
+>>>>>>> master
 import HabitacionesView from '../views/HabitacionesView.vue'
 import TarifasView from '../views/TarifasView.vue'
 import ReservasView from '../views/ReservasView.vue'
 import ContactoView from '../views/ContactoView.vue'
+import ReservasView2 from '../views/ReservasView2.vue'
 
 
 Vue.use(VueRouter)
+Vue.use(Vuetify)
 
 const routes = [
   {
@@ -30,6 +37,11 @@ const routes = [
     component: Inicio
   },
   {
+    path:'/hotelView',
+    name:'HotelView',
+    component:HotelView
+  },
+  {
     path:'/habitacionesview',
     name:'HabitacionesView',
     component:HabitacionesView
@@ -43,6 +55,11 @@ const routes = [
     path:'/reservasview',
     name:'ReservasView',
     component:ReservasView
+  },
+  {
+    path:'/reservasview2',
+    name:'ReservasView2',
+    component:ReservasView2
   },
   {
     path:'/contactoview',
