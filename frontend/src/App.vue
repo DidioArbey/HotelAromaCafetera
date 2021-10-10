@@ -77,40 +77,46 @@
             class="mb-1"
             no-gutters>
             <v-col class="green lighten-1">
-              <v-icon color="white">fas fa-coffee</v-icon>
+              <v-img
+                max-height="35"
+                max-width="auto"
+                @click="face()"
+                align-end
+                contain
+                src="../src/assets/face.png"
+                ></v-img>
             </v-col>
             <v-col class="green lighten-1">
-              <v-icon color="white">fas fa-coffee</v-icon>
+              <v-img
+                max-height="35"
+                max-width="auto"
+                align-end
+                @click="inst()"
+                contain
+                src="../src/assets/inst.png"
+                a href></v-img>
             </v-col>
             <v-col class="green lighten-1">
-              <v-icon color="white">fas fa-coffee</v-icon>
+              <v-img
+                max-height="30"
+                max-width="auto"
+                align-end
+                @click="trip()"
+                contain
+                src="../src/assets/trip.png"
+                ></v-img>
             </v-col>
             <v-col class="green lighten-1">
-              <v-icon color="white">fas fa-coffee</v-icon>
+              <v-img
+                max-height="35"
+                max-width="auto"
+                align-end
+                @click="book()"
+                contain
+                src="../src/assets/Book.png"
+                ></v-img>
             </v-col>
           </v-row>
-
-          <!-- <p>Siguenos... <br></p> -->
-
-
-          <!-- <strong class="subheading"
-            >Encuentranos tambien en nuestras Redes Sociales</strong
-          > -->
-
-          <!-- <v-spacer></v-spacer>
-
-          <!-- <v-btn
-            v-for="icon in icons"
-            :key="icon"
-            class="mx-4"
-            icon
-            dark
-            color="#B71C1C"
-          >
-            <v-icon size="24px" color="#B71C1C">
-              {{ icon }}
-            </v-icon>
-          </v-btn> -->
         </v-card-title>
 
         <v-card-text class="py-2 white--text text-center">
@@ -154,6 +160,18 @@ export default {
     contactenos() {
       console.log("ir al tarifas funcionando");
       this.$router.push("/contactoview");
+    },
+    face() {
+      location.href="https://www.facebook.com/Aroma-cafetera-hotel-378362249262641";
+    },
+    inst() {
+      location.href="https://www.instagram.com/aromacafeterahotel";
+    },
+    trip() {
+      location.href="https://www.tripadvisor.co/Hotel_Review-g2044718-d12902680-Reviews-Aroma_Cafetera-Circasia_Quindio_Department.html";
+    },
+    book() {
+      location.href="https://www.booking.com/hotel/co/aroma-cafetera.es.html";
     },
   },
 };

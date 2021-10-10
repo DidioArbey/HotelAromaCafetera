@@ -15,7 +15,7 @@
                 align-end
                 contain
                 src="../assets/img/reserve-b.png"
-                ></v-img>
+                ></v-img> 
             </v-row>
 
             <v-row 
