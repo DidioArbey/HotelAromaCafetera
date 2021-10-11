@@ -1,19 +1,32 @@
 <template>
     <v-app>
-        <v-sheet  class=" mx-16 my-12"
-            color="white"
+        <v-sheet  
+            class="mx-16 my-12" 
+            color="white" 
+            rounded 
+            height="auto"
             elevation="6"
-            rounded
-            height= auto
         >
+
             <v-row class=" red darken-4 mx-auto my-auto rounded-t-lg d-flex px-10 py-6 ">
-                <h2 class="white--text">Reserve con nosotros</h2>
+                <v-img
+                max-height="44"
+                max-width="auto"
+                align-end
+                contain
+                src="../assets/img/reserve-b.png"
+                ></v-img> 
             </v-row>
 
-            <v-row justify="center" class="mx-15 my-8  d-flex px-10  py-6">
-                <v-form v-model="valid">
+            <v-row 
+                justify="center" 
+                class="mx-15 my-8  d-flex px-10  py-6">
+                    <h3>Paso 1: Llene sus datos personales</h3>
+
+                    <v-form v-model="valid">
                     <v-container bg fill-height>
                     <v-row class=" d-flex">
+
                         <v-col class="mr-8">
                         <v-text-field
                             v-model="names"
@@ -23,6 +36,7 @@
                             solo
                         ></v-text-field>
                         </v-col>
+
                         <v-col>
                         <v-text-field
                             v-model="lastName"
@@ -37,18 +51,19 @@
                     <v-row>
                         <v-col class="mr-8">
                         <v-text-field
-                            v-model="phoneNumber"
-                            :rules="phoneRules"
-                            label="Teléfono"
+                            v-model="idNumber"
+                            :rules="cedulaRules"
+                            label="Cédula"
                             required
                             solo
                         ></v-text-field>
                         </v-col>
+
                         <v-col>
                         <v-text-field
-                            v-model="email"
-                            :rules="emailRules"
-                            label="E-mail"
+                            v-model="cellNumber"
+                            :rules="cellRules"
+                            label="Número Celular"
                             required
                             solo
                         ></v-text-field>
@@ -58,53 +73,37 @@
                     <v-row>
                         <v-col class="mr-8">
                         <v-text-field
-                            v-model="numPersons"
-                            :rules="numPersonsRules"
-                            label="Número de personas"
+                            v-model="email"
+                            :rules="emailRules"
+                            label="e-mail"
                             required
                             solo
                         ></v-text-field>
                         </v-col>
                         <v-col>
-                        <v-autocomplete
-                            v-model="bedrooms"
-                            :items="items"
-                            small-chips
-                            label="Habitaciones"
-                            multiple
-                            solo
-                        ></v-autocomplete>
-                        </v-col>
-                    </v-row>
-
-                    <v-row>
-                        <v-col class="mr-8 ml-n8" >
                         <v-text-field
-                            v-model="dateRangeText"
-                            label="Fecha de reserva"
-                            prepend-icon="mdi-calendar"
+                            v-model="city"
+                            :rules="cityRules"
+                            label="Ciudad de Origen"
+                            required
                             solo
                         ></v-text-field>
                         </v-col>
-                        <v-col>
-                        <v-date-picker
-                            v-model="dates"
-                            range
-                        ></v-date-picker>
-                        </v-col>
-
                     </v-row>
 
                     <v-row justify="center" class="mt-10">
-                        <v-btn @click="clear" class="mr-10 red darken-4 px-10 ">
+                        <v-btn
+                        @click="clear" 
+                        class="mr-10 red darken-4 px-10">
                             <span class="white--text">Limpiar</span>
                         </v-btn>
+
                         <v-btn
-                        class="mr-10  red darken-4 px-10 mb-4"
+                        @click="submit"
+                        class="mr-10 red darken-4 px-10"
                         type="submit"
-                        :disabled="invalid"
-                        >
-                            <span class="white--text">Reservar</span>
+                        :disabled="invalid">
+                            <span class="white--text">Siguiente</span>
                         </v-btn>
                     </v-row>
                     </v-container>
@@ -115,8 +114,6 @@
 </template>
 
 
-
-
 <script>
 
 export default {
@@ -125,7 +122,6 @@ export default {
         phoneNumber: '',
         email: '',
         comments: '',
-        dates: ['2019-09-10', '2019-09-20'],
     }),
     computed: {
         dateRangeText () {
@@ -133,21 +129,21 @@ export default {
         },
     },
 
+
         methods: {
         submit () {
-            this.$refs.observer.validate()
+            this.reservar2()
         },
         clear () {
             this.names = ''
             this.lastName = ''
             this.phoneNumber = ''
             this.email = ''
-            this.numPersons = ''
-            this.bedrooms = ''
-            this.dateRangeText= ''
+            this.cellNumber = ''
+            this.idNumber = ''
+            this.city = ''
             this.$refs.observer.reset()
         },
         },
 };
 </script>
-
