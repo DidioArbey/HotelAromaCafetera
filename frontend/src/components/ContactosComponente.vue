@@ -17,11 +17,11 @@
             </v-row>
 
             <v-row justify="center" class="mx-auto my-auto  d-flex px-10  py-6">
-                <v-form v-model="valid" @submit.prevent="handleSubmitForm">
+                <v-form @submit.prevent="handleSubmitForm">
                     <v-container bg fill-height>
                     <v-row class=" d-flex">
                         <v-text-field
-                            v-model="name"
+                            v-model="nombreUser"
                             :rules="nameRules"
                             :counter="10"
                             label="Nombres y Apellidos"
@@ -31,7 +31,7 @@
 
                     <v-row>
                         <v-text-field
-                            v-model="email"
+                            v-model="emailUser"
                             :rules="emailRules"
                             label="E-mail"
                             required
@@ -40,7 +40,7 @@
 
                     <v-row>
                         <v-text-field
-                            v-model="phoneNumber"
+                            v-model="telefonoUser"
                             :rules="phoneRules"
                             :counter="10"
                             label="Teléfono"
@@ -50,7 +50,7 @@
 
                     <v-row>
                         <v-textarea
-                            v-model="comments"
+                            v-model="mensajeUser"
                             :rules="commentRules"
                             label="Dinos algo que podamos solucionarte"
                             required
@@ -61,7 +61,6 @@
                         <v-btn
                         class="mr-10  red darken-4 px-10 mb-4"
                         type="submit"
-                        :disabled="invalid"
                         >
                             <span class="white--text">Enviar</span>
                         </v-btn>
@@ -83,16 +82,16 @@
 import axios from "axios";
 export default {
     data: () => ({
-        name: '',
-        phoneNumber: '',
-        email: '',
-        comments: ''
+        nombreUser: '',
+        emailUser: '',
+        telefonoUser: '',
+        mensajeUser: ''
         }),
 
         methods: {
 
         handleSubmitForm() {
-            let apiURL = "http://localhost:3000/api/contacto";
+            let apiURL = "http://localhost:3000/api/contacto/add";
                 this.$refs.observer.validate()
 
         axios
@@ -100,11 +99,10 @@ export default {
             .then(() => {
             this.$router.push("/add");
             this.contacto = {
-                name: "",
-                email: "",
-                phone: "",
-                phoneNumber: "",
-                comments: ""
+                nombreUser: "",
+                emailUser: "",
+                telefonoUser: "",
+                mensajeUser: ""
             };
             })
             .catch((error) => {
@@ -112,10 +110,10 @@ export default {
             });
         },
         clear () {
-            this.name = ''
-            this.email = ''
-            this.phoneNumber = ''
-            this.comments = ''
+            this.nombreUser = ''
+            this.emailUser = ''
+            this.telefonoUser = ''
+            this.mensajeUser = ''
             this.$refs.observer.reset()
         },
         },
