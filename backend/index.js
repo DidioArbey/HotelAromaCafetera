@@ -31,6 +31,16 @@ app.use(
     })
 );
 
+//Cors
+app.use((req, res, next)=>{
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, ContentType, Accept");
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
+
+
 // Connect mongoDB
 mongoose.Promise = global.Promise;
 mongoose
@@ -58,7 +68,7 @@ app.use('/api/contacto', contacto);
 //PUERTO
 app.set('puerto', process.env.PORT || 3000);
 app.listen(app.get('puerto'), function () {
-    console.log('el backend escucha en el puerto ' + app.get('puerto'));
+    console.log('Server started on port: ' + app.get('puerto'));
 });
 
 

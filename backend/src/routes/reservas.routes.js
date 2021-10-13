@@ -54,7 +54,7 @@ reservaRoute.route("/update-client/:id").put((req, res, next) => {
                 return next(error);
             } else {
                 res.json(data);
-                console.log("Student successfully updated!");
+                console.log("Reserve successfully updated!");
             }
         }
     );

@@ -17,7 +17,7 @@
             </v-row>
 
             <v-row justify="center" class="mx-auto my-auto  d-flex px-10  py-6">
-                <v-form v-model="valid">
+                <v-form v-model="valid" @submit.prevent="handleSubmitForm">
                     <v-container bg fill-height>
                     <v-row class=" d-flex">
                         <v-text-field
@@ -80,7 +80,7 @@
 
 
 <script>
-
+import axios from "axios";
 export default {
     data: () => ({
         name: '',
@@ -90,8 +90,26 @@ export default {
         }),
 
         methods: {
-        submit () {
-            this.$refs.observer.validate()
+
+        handleSubmitForm() {
+            let apiURL = "http://localhost:3000/api/contacto";
+                this.$refs.observer.validate()
+
+        axios
+            .post(apiURL, this.contacto)
+            .then(() => {
+            this.$router.push("/add");
+            this.contacto = {
+                name: "",
+                email: "",
+                phone: "",
+                phoneNumber: "",
+                comments: ""
+            };
+            })
+            .catch((error) => {
+            console.log(error);
+            });
         },
         clear () {
             this.name = ''
